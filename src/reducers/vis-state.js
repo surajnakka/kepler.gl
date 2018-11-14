@@ -52,7 +52,10 @@ import {
   setVisibleLayersForMapUpdater,
   toggleLayerForMapUpdater,
   layerVisConfigChangeUpdater,
-  layerVisualChannelChangeUpdater
+  layerVisualChannelChangeUpdater,
+  addTiledDatasetSampleUpdater,
+  addTiledDataIdUpdater,
+  incrementLayerVersionUpdater
 } from './vis-state-updaters';
 
 const actionHandler = {
@@ -111,6 +114,12 @@ const actionHandler = {
   [ActionTypes.TOGGLE_SPLIT_MAP]: toggleSplitMapUpdater,
 
   [ActionTypes.UPDATE_LAYER_BLENDING]: updateLayerBlendingUpdater,
+
+  [ActionTypes.ADD_TILED_DATASET_SAMPLE]: addTiledDatasetSampleUpdater,
+
+  [ActionTypes.ADD_TILED_DATA_ID]: addTiledDataIdUpdater,
+
+  [ActionTypes.INCREMENT_LAYER_VERSION]: incrementLayerVersionUpdater,
 
   // currently not used
   // but may be useful if users import vist state reducer
